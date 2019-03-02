@@ -59,6 +59,12 @@ On GitLab Omnibus, you must be in the following directory when you run CLI comma
 
     cd /opt/gitlab/embedded/service/mattermost
     sudo -u mattermost /opt/gitlab/embedded/bin/mattermost --config=/var/opt/gitlab/mattermost/config.json version
+    
+If you installed Gitlab Omnibus using docker, the command from the docker host would be
+
+  .. code-block:: bash
+
+   docker container exec -it <containername> su mattermost -c 'cd /opt/gitlab/embedded/service/mattermost ; /opt/gitlab/embedded/bin/mattermost --config=/var/opt/gitlab/mattermost/config.json version'    
 
 .. note::
   The example commands in the documentation are for a default installation of Mattermost. You must modify the commands so that they work on GitLab Omnibus.
